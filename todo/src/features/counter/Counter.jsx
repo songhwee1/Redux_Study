@@ -1,8 +1,9 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from './counterSlice'
+import { NavLink } from 'react-router-dom';
 
-export function Counter() {
+const Counter = () => {
   const count = useSelector(state => state.counter.value)
   const dispatch = useDispatch()
 
@@ -22,7 +23,12 @@ export function Counter() {
         >
           Decrement
         </button>
+        <NavLink to={`/nextpage`}>
+          Next Page
+        </NavLink>
       </div>
     </div>
   )
 }
+
+export default Counter

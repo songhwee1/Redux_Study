@@ -1,9 +1,14 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { Counter } from "./features/counter/Counter";
+import { Route, Routes } from "react-router-dom";
+import Counter from "./features/counter/Counter";
+import NextPage from "./pages/NextPage";
 
-function App() {
-  return <Counter />;
-}
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/counter" element={<Counter />} />
+      <Route path="/nextpage" element={<NextPage />} />
+    </Routes>
+  );
+};
 
 export default App;
